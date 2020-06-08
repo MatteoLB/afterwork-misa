@@ -1,0 +1,229 @@
+@font-face 
+{
+    font-family: "DS-Digital";
+    src: url("./font/DS-DIGI.TTF") format('truetype');
+    font-weight: normal;
+}
+@font-face 
+{
+    font-family: "DS-Digital";
+    src: url("./font/DS-DIGIB.TTF") format('truetype');
+    font-weight: bold;
+}
+body
+{
+    /*background: url('assets/sky_640x400.png');*/
+}
+#backgroundCanvas
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #000015;
+}
+#gameCanvas
+{
+    background: url('assets/rainbowtest2.png');
+}
+img
+{
+    display: none;
+}
+#gameContainer
+{
+    width: 500px; 
+    height: 700px; 
+    margin:auto;
+    position: fixed;
+    bottom: 2px;
+    left: 0;
+    right: 0;
+}
+
+
+
+/* ***********************************************************************************************************************************************
+ * Liste des bonus
+*/
+#bonusList, #rankings, #rankingsContent
+{
+	z-index: 100;
+	position: absolute;
+	top: 10px;
+	color: #ffffff91;
+	font-family: "DS-Digital";
+}
+
+#bonusList
+{
+	right: 10px;
+}
+#rankings
+{
+	left: 10px;
+}
+
+#rankingsContent
+{
+	top: 30px;
+	left: 10px;
+}
+
+#bonusListContent, #rankingsContent
+{
+	margin-top: 10px;
+	background: #5b5b5b4d;
+    border: 1px solid #50505099;
+    padding: 0px 12px;
+}
+
+#bonusList h3, #rankings h3
+{
+	margin-top: 0px;
+	margin-bottom: 0px;
+	text-align: center;
+}
+
+#bonusList img
+{
+	display: inline-block;
+	height: 30px;
+	margin-right: 10px;
+}
+
+#bonusListContent div:nth-child(1), #bonusListContent div:nth-child(2)
+{
+	color: #00ca00;
+}
+#bonusListContent div:nth-child(3), #bonusListContent div:nth-child(4)
+{
+	color: red;
+}
+
+.bonusListItem
+{
+	display: flex;
+	align-items: center;
+}
+
+.rankerItem
+{
+	display: flex;
+	text-align: center;
+	justify-content: space-between;
+}
+
+.rankerItem p
+{
+	padding: 0px 12px;
+	font-size: 1.2rem;
+}
+.rankerItem p:first-child
+{
+	color: white;
+}
+.rankerItem p:last-child
+{
+	color: green;
+}
+
+
+
+/* ***********************************************************************************************************************************************
+ * Styles for congratulations modal
+*/
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 5px;
+  width: 50%;
+  position: relative;
+  transition: all 5s ease-in-out;
+  font-family: 'courier', cursive;
+}
+
+.popup h2 {
+  text-align: center;
+  color: red;
+  font-weight: bold;
+  font-family: 'DS-Digital', Tahoma, Arial, sans-serif;
+  font-size: 3.5rem;
+  margin-bottom: 30px;
+}
+
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+
+.popup .close:hover {
+  color: #E5F720;
+}
+
+.popup .content-1,
+.content-2 {
+  max-height: 30%;
+  overflow: auto;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.show {
+  visibility: visible !important;
+  opacity: 100 !important;
+}
+
+#starRating li {
+  display: inline-block;
+}
+
+#playerName, #sendRanking
+{
+	font-size: 1.1rem;
+}
+
+#sendRanking
+{
+	background-color: #141214;
+	font-family: 'DS-Digital';
+	color: white;
+	border-radius: 3px;
+	padding: 3px 12px;
+}
+
+#play-again {
+  background-color: #141214;
+  padding: 0.7rem 1rem;
+  font-size: 1.6rem;
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+  font-family: 'DS-Digital';
+  color: #ffffff;
+  border-radius: 5px;
+}
